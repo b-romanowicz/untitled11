@@ -1,11 +1,14 @@
-package object;
+package main.java.object;
 
-
-
-public interface Object {
+public abstract class Object {
     
-	public Position getPosition();
-	public void move();
+	Position position;
+	
+	public Position getPosition() {
+		return position;
+	}
+	
+	public abstract void move();
 	//test
 
 }

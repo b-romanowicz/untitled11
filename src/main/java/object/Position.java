@@ -1,4 +1,4 @@
-package object;
+package main.java.object;
 
 public class Position {
 
@@ -35,6 +35,5 @@ public class Position {
 	public void setZ(int z) {
 		this.z = z;
 	}
-	
 
 }

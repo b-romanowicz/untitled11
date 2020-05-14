@@ -18,6 +18,5 @@ public class AquariumCreator {
 	{
 		return new Aquarium(x, y, z);
 	}
-	
 }
 

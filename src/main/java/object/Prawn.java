@@ -1,6 +1,4 @@
-package object.organism;
-
-import object.Position;
+package main.java.object;
 
 public class Prawn extends Organism {
 

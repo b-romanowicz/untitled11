@@ -1,4 +1,4 @@
-package object.organism;
+package main.java.object;
 
 public abstract class ZachowanieOrganizmow {
 
