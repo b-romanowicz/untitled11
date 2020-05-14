@@ -21,9 +21,11 @@ public abstract class Organism implements Object {
     public void setAge(int age) {
     	this.age = age;
     }
+    
     public int getHunger() {
     	return hunger;
     }
+    
     public void setHunger(int hunger) {
     	this.hunger = hunger;
     }
