@@ -1,4 +1,4 @@
-package main.java.object.organism.creators;
+package main.java.object.creators;
 
 import main.java.object.Fish;
 import main.java.object.Prawn;
