@@ -15,8 +15,7 @@ public class MovementUtility {
 	}
 	
 	public void moveFish(Fish fish) {
-		Organism org = (Organism) fish;
-		Position pos = org.getPosition();
+		Position pos = fish.getPosition();
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
