@@ -5,10 +5,6 @@ import main.java.object.Position;
 
 public class Prawn extends Organism {
 
-    private Position position;
-    private int age;
-    private int hunger;
-
     @Override
     public void move() {
 
@@ -18,12 +14,6 @@ public class Prawn extends Organism {
     @Override
     public void eat() {
 
-    }
-
-    @Override
-    public Position getPosition() {
-
-        return null;
     }
 
     @Override
@@ -38,29 +28,6 @@ public class Prawn extends Organism {
 
     }
 
-    @Override
-    public int getSize() {
-
-        return 0;
-    }
-
-    @Override
-    public void setSize() {
-
-
-    }
-
-    @Override
-    public int getHunger() {
-
-        return 0;
-    }
-
-    @Override
-    public void setHunger() {
-
-<<<<<<< HEAD
-    }
 
     public void move() {
 
