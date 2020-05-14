@@ -3,6 +3,8 @@ package main.java.aquarium;
 import java.util.LinkedList;
 import java.util.List;
 
+import main.java.object.utilities.MovementUtility;
+
 public class Aquarium {
 
 	private final int x;
@@ -12,6 +14,7 @@ public class Aquarium {
 	private List<Object> objects;
 	
 	public Aquarium(int x, int y, int z) {
+		new MovementUtility(this);
 		this.x = x;
 		this.y = y;
 		this.z = z;

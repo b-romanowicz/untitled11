@@ -19,6 +19,7 @@ public class MovementUtility {
 		maxY = aquarium.getWidth();
 		maxZ = aquarium.getHeight();
 	}
+	
 	private int randomCoordinate(Fish fish, char c) {
 		Position pos = fish.getPosition();
 		int speed = fish.getSpeed();
