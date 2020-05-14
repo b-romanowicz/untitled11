@@ -1,6 +1,6 @@
 package main.java.object;
 
-public class Fish extends Organism {
+public class Fish extends main.java.object.Organism {
     
 		private int speed;
 		private int temperature;

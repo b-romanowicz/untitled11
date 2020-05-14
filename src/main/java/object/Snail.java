@@ -1,11 +1,14 @@
 package main.java.object;
 
-public class Snail extends Organism {
+import main.java.object.Organism;
+
+public abstract class Snail extends Organism {
 
 	@Override
 	public void eat() {
 		// TODO Auto-generated method stub
-		
+
+
 	}
 
 }

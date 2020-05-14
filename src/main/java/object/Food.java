@@ -1,5 +1,7 @@
 package main.java.object;
 
+import main.java.object.Position;
+
 public abstract class Food implements Object{
 
 	private Position position;
