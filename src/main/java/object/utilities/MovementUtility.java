@@ -1,7 +1,6 @@
 package main.java.object.utilities;
 
 import main.java.object.Fish;
-import main.java.object.Organism;
 import main.java.object.Position;
 
 public class MovementUtility {
