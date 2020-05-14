@@ -1,11 +1,11 @@
 package main.java.object;
 
-public class Fodder extends Object {
+public class Fodder implements Object {
 
 	@Override
-	public void move() {
+	public Position getPosition() {
 		// TODO Auto-generated method stub
-		
+		return null;
 	}
 	
 }

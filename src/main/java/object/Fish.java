@@ -17,6 +17,12 @@ public class Fish extends Organism {
         }
 
 		@Override
+		public void move() {
+			// TODO Auto-generated method stub
+			
+		}
+        
+        @Override
 		public void eat() {
 			
 		}
