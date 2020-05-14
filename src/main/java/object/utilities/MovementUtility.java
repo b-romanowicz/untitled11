@@ -4,7 +4,7 @@ import java.util.Random;
 
 import main.java.object.Fish;
 import main.java.object.Position;
-import main.java.aquarium.Aquarium;
+
 
 public class MovementUtility {
 
@@ -13,7 +13,7 @@ public class MovementUtility {
 	final private int maxZ;
 	final private Random random;
 	
-	public MovementUtility(Aquarium aquarium) {
+	public MovementUtility(src.main.java.aquarium.Aquarium aquarium) {
 		random = new Random();
 		maxX = aquarium.getLength();
 		maxY = aquarium.getWidth();
