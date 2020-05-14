@@ -5,8 +5,6 @@ public class Prawn extends Organism {
     private Position position;
     private int age;
     private int hunger;
-    private int size;
-
 
     @Override
     public void getPosition() {
@@ -30,16 +28,6 @@ public class Prawn extends Organism {
 
     @Override
     public void setHunger() {
-
-    }
-
-    public int setSize()
-    {
-
-        return 0;
-    }
-
-    public void getSize() {
 
     }
 

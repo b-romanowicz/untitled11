@@ -6,8 +6,6 @@ public abstract class Organism implements Object {
 	public abstract Position getPosition();
     public abstract int getAge();
     public abstract void setAge();
-    public abstract int getSize();
-    public abstract void setSize();
     public abstract int getHunger();
     public abstract void setHunger();
     public abstract void move();

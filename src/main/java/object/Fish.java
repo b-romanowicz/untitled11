@@ -5,7 +5,6 @@ public class Fish extends Organism {
 		private int speed;
 		private int temperature;
         private int age;
-        private int size;
         private int hunger;
     	
 		
@@ -54,18 +53,6 @@ public class Fish extends Organism {
 
 		@Override
 		public void setAge() {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public int getSize() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public void setSize() {
 			// TODO Auto-generated method stub
 			
 		}
