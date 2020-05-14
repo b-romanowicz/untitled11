@@ -1,4 +1,4 @@
-package src.main.java.aquarium;
+package main.java.aquarium;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -6,7 +6,6 @@ import main.java.object.Fish;
 import main.java.object.Position;
 import main.java.aquarium.Aquarium;
 
-
 public class MovementUtility {
 
 	final private int maxX;
