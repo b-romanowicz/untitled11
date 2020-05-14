@@ -1,5 +1,7 @@
 package main.java.object;
 
+
+
 public abstract class Organism implements Object {
 	
 	@Override

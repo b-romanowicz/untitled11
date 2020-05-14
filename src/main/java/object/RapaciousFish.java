@@ -1,6 +1,6 @@
 package main.java.object;
 
-public class RapaciousFish extends Fish{
+public class RapaciousFish  {
 
 	
 }

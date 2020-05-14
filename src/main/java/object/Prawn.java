@@ -12,20 +12,47 @@ public class Prawn extends Organism {
 
 
     @Override
-    public void getPosition() {
+    public void move() {
+
 
     }
 
     @Override
-    public void getAge() {
+    public void eat() {
 
+    }
+
+    @Override
+    public Position getPosition() {
+
+        return null;
+    }
+
+    @Override
+    public int getAge() {
+
+        return 0;
     }
 
     @Override
     public void setAge() {
 
+
     }
 
+    @Override
+    public int getSize() {
+
+        return 0;
+    }
+
+    @Override
+    public void setSize() {
+
+
+    }
+
+    @Override
     public int getHunger() {
 
         return 0;
@@ -34,23 +61,6 @@ public class Prawn extends Organism {
     @Override
     public void setHunger() {
 
-    }
-
-    public int setSize()
-    {
-
-        return 0;
-    }
-
-    public void getSize() {
-
-    }
-
-    public void move() {
-
-    }
-
-    public void eat() {
 
     }
 
