@@ -10,14 +10,15 @@ public class Aquarium {
 	private final int x;
 	private final int y;
 	private final int z;
+	private MovementUtility moveUtil;
 	
 	private List<Object> objects;
 	
 	public Aquarium(int x, int y, int z) {
-		new MovementUtility(this);
 		this.x = x;
 		this.y = y;
 		this.z = z;
+		moveUtil = new MovementUtility(this);
 		objects = new LinkedList<>();
 	}
 	
@@ -31,6 +32,10 @@ public class Aquarium {
 
 	public int getHeight() {
 		return z;
+	}
+	
+	public MovementUtility getMovementUtility() {
+		return moveUtil;
 	}
 
 	public boolean add(Object obj) {
