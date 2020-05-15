@@ -2,8 +2,14 @@ package main.java.object;
 
 import main.java.object.Organism;
 import main.java.object.Position;
+import main.java.aquarium.Aquarium;
+
 
 public class Prawn extends Organism {
+
+    public Prawn(Aquarium aquarium) {
+        super(aquarium);
+    }
 
     @Override
     public void move() {
@@ -22,22 +28,13 @@ public class Prawn extends Organism {
         return 0;
     }
 
-    @Override
     public void setAge() {
 
 
     }
 
 
-    @Override
-    public void move() {
 
-    }
-
-    public void eat() {
-
-
-    }
 
 
 }

@@ -1,4 +1,4 @@
-package main.java.sample;
+package sample;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class Main  {
 		aquarium = aquariumCreator.createAquarium();
 		this.maxIterNum = maxIterNum;
 	}
-	
+	/*
 	public void run(int fishNum) {
 		int iters = maxIterNum;
 		aquarium.getOrganismCreator().createOrganisms(fishNum, 0, 0, 0);
@@ -29,7 +29,7 @@ public class Main  {
 			}
 		} while(--iters>0);
 	}
-	
+	*/
 	private static int checkInt(String arg) {
 		try {
             int integer = Integer.parseInt(arg);
@@ -41,14 +41,16 @@ public class Main  {
 	}
 	
     public static void main(String[] args) {
-    	int length = checkInt(args[0]);
+    	/*int length = checkInt(args[0]);
     	int width = checkInt(args[1]);
     	int height = checkInt(args[2]);
     	int fishNumber = checkInt(args[3]);
     	int maxIter = checkInt(args[4]);
     	AquariumCreator aquariumCreator = new AquariumCreator(length, width, height);
     	Main simulation = new Main(aquariumCreator, maxIter);
-        simulation.run(fishNumber);
+      //  simulation.run(fishNumber);*/
     	System.out.println("dziala");
     }
+
+
 }
