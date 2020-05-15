@@ -1,12 +1,14 @@
 package main.java.object;
 
+import main.java.aquarium.Aquarium;
+
 public class Fish extends main.java.object.Organism {
     
 		private int speed;
 		private int temperature;
 		
-		public Fish() {
-    		super();
+		public Fish(Aquarium aquarium) {
+    		super(aquarium);
     	}
 		
 		public int getSpeed() {
@@ -27,7 +29,7 @@ public class Fish extends main.java.object.Organism {
 
 		@Override
 		public void move() {
-			
+			aquarium.getMovementUtility().moveFish(this);
 		}
         
         @Override

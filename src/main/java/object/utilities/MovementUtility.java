@@ -8,6 +8,7 @@ import main.java.aquarium.Aquarium;
 
 public class MovementUtility {
 
+	final private Aquarium aquarium;
 	final private int maxX;
 	final private int maxY;
 	final private int maxZ;
@@ -15,9 +16,10 @@ public class MovementUtility {
 	
 	public MovementUtility(Aquarium aquarium) {
 		random = new Random();
-		maxX = aquarium.getLength();
-		maxY = aquarium.getWidth();
-		maxZ = aquarium.getHeight();
+		this.aquarium = aquarium;
+		maxX = this.aquarium.getLength();
+		maxY = this.aquarium.getWidth();
+		maxZ = this.aquarium.getHeight();
 	}
 	
 	private int randomCoordinate(Fish fish, char c) {

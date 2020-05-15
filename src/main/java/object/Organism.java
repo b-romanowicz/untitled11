@@ -1,13 +1,18 @@
 package main.java.object;
 
-
+import main.java.aquarium.Aquarium;
 
 public abstract class Organism implements Object {
 	
+	protected Aquarium aquarium;
 	protected Position position;
 	protected int speed;
     protected int age;
     protected int hunger;
+    
+    public Organism(Aquarium aquarium) {
+    	this.aquarium = aquarium;
+    }
     
     @Override
 	public Position getPosition() {
