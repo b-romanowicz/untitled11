@@ -2,20 +2,12 @@ package main.java.object;
 
 public class Fish extends main.java.object.Organism {
     
-		private Position position;
 		private int speed;
 		private int temperature;
-        private int age;
-        private int hunger;
 		
 		public Fish(int age, int size) {
     		
     	}
-		
-		@Override
-		public Position getPosition() {
-			return position;
-		}
 		
 		public int getSpeed() {
 			return speed;
@@ -41,31 +33,6 @@ public class Fish extends main.java.object.Organism {
         @Override
 		public void eat() {
 			
-		}
-
-		@Override
-		public int getAge() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public void setAge() {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public int getHunger() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public void setHunger() {
-			// TODO Auto-generated method stub
-			
-		}
-        
+		}        
     }
 
