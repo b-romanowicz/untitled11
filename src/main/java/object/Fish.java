@@ -1,16 +1,14 @@
 package main.java.object;
 
+import main.java.aquarium.Aquarium;
+
 public class Fish extends main.java.object.Organism {
     
 		private int speed;
 		private int temperature;
-        private int age;
-        private int size;
-        private int hunger;
-    	
 		
-		public Fish(int age, int size) {
-    		
+		public Fish(Aquarium aquarium) {
+    		super(aquarium);
     	}
 		
 		public int getSpeed() {
@@ -31,56 +29,12 @@ public class Fish extends main.java.object.Organism {
 
 		@Override
 		public void move() {
-			// TODO Auto-generated method stub
-			
+			aquarium.getMovementUtility().moveFish(this);
 		}
         
         @Override
 		public void eat() {
 			
-		}
-
-		@Override
-		public Position getPosition() {
-			// TODO Auto-generated method stub
-			return null;
-		}
-
-		@Override
-		public int getAge() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public void setAge() {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public int getSize() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public void setSize() {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public int getHunger() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
-
-		@Override
-		public void setHunger() {
-			// TODO Auto-generated method stub
-			
-		}
-        
+		}        
     }
 

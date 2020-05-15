@@ -4,21 +4,24 @@ import java.util.Random;
 
 import main.java.object.Fish;
 import main.java.object.Position;
-
+import main.java.aquarium.Aquarium;
 
 public class MovementUtility {
 
+	final private Aquarium aquarium;
 	final private int maxX;
 	final private int maxY;
 	final private int maxZ;
 	final private Random random;
 	
-	public MovementUtility(src.main.java.aquarium.Aquarium aquarium) {
+	public MovementUtility(Aquarium aquarium) {
 		random = new Random();
-		maxX = aquarium.getLength();
-		maxY = aquarium.getWidth();
-		maxZ = aquarium.getHeight();
+		this.aquarium = aquarium;
+		maxX = this.aquarium.getLength();
+		maxY = this.aquarium.getWidth();
+		maxZ = this.aquarium.getHeight();
 	}
+	
 	private int randomCoordinate(Fish fish, char c) {
 		Position pos = fish.getPosition();
 		int speed = fish.getSpeed();
@@ -48,13 +51,14 @@ public class MovementUtility {
 	
 	public void moveFish(Fish fish) {
 		Position pos = fish.getPosition();
-		int x = randomCoordinate(fish, 'x');
-		int y = randomCoordinate(fish, 'y');
-		int z = randomCoordinate(fish, 'z');
-		if( x!=pos.getX() && y!=pos.getY() && z!=pos.getZ()) {
-			pos.setX(x);
-			pos.setY(y);
-			pos.setZ(z);
-		}
-	}
+		int x, y, z;
+		do { 
+			x = randomCoordinate(fish, 'x');
+			y = randomCoordinate(fish, 'y');
+			z = randomCoordinate(fish, 'z');
+		} while(x!=pos.getX() && y!=pos.getY() && z!=pos.getZ());
+		pos.setX(x);
+		pos.setY(y);
+		pos.setZ(z);
+	}	
 }

@@ -11,7 +11,7 @@ public class Position {
 		this.y = y;
 		this.z = z;
 	}
-		
+	
 	public int getX() {
 		return x;
 	}
@@ -36,4 +36,8 @@ public class Position {
 		this.z = z;
 	}
 
+	@Override
+	public String toString() {
+		return "x: " + x + " y: " + y + " z: " + z;
+	}
 }

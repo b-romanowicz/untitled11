@@ -1,13 +1,20 @@
-package src.main.java.aquarium;
+package main.java.aquarium;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import main.java.object.Organism;
+import main.java.object.creators.OrganismCreator;
+import main.java.object.utilities.MovementUtility;
 
 public class Aquarium {
 
 	private final int x;
 	private final int y;
 	private final int z;
+	private OrganismCreator organismCreator;
+	private MovementUtility movementUtility;
 	
 	private List<Object> objects;
 	
@@ -15,6 +22,8 @@ public class Aquarium {
 		this.x = x;
 		this.y = y;
 		this.z = z;
+		organismCreator = new OrganismCreator(this);
+		movementUtility = new MovementUtility(this);
 		objects = new LinkedList<>();
 	}
 	
@@ -28,6 +37,14 @@ public class Aquarium {
 
 	public int getHeight() {
 		return z;
+	}
+	
+	public OrganismCreator getOrganismCreator() {
+		return organismCreator;
+	}
+	
+	public MovementUtility getMovementUtility() {
+		return movementUtility;
 	}
 
 	public boolean add(Object obj) {
@@ -46,4 +63,14 @@ public class Aquarium {
 		return false;
 	}
 	
+	public List<Organism> getOrganisms() {
+		List<Organism> organisms = new ArrayList<>();
+		for(Object object : objects ) {
+			if(object instanceof Organism) {
+				Organism organism = (Organism) object;
+				organisms.add(organism);
+			}
+		}
+		return organisms;
+	}
 }
