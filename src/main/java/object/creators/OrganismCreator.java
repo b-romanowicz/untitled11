@@ -11,8 +11,8 @@ import main.java.object.Snail;
 
 public class OrganismCreator {
 	
-	Aquarium aquarium;
-	Random random;
+	private Aquarium aquarium;
+	private Random random;
 	
 	public OrganismCreator(Aquarium aquarium) {
 		this.aquarium = aquarium;
@@ -49,7 +49,7 @@ public class OrganismCreator {
 			int x = random.nextInt(aquarium.getLength());
 			int y = random.nextInt(aquarium.getWidth());
 			int z = random.nextInt(aquarium.getHeight());
-			int speed = random.nextInt(2)+1;
+			int speed = random.nextInt(3)+1;
 			this.createFish(x, y, z, speed);
 		}
 		//for(int i=0; i<prawnNum; i++) this.createPrawn();

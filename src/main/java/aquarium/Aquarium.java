@@ -1,8 +1,10 @@
 package main.java.aquarium;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import main.java.object.Organism;
 import main.java.object.creators.OrganismCreator;
 import main.java.object.utilities.MovementUtility;
 
@@ -61,4 +63,14 @@ public class Aquarium {
 		return false;
 	}
 	
+	public List<Organism> getOrganisms() {
+		List<Organism> organisms = new ArrayList<>();
+		for(Object object : objects ) {
+			if(object instanceof Organism) {
+				Organism organism = (Organism) object;
+				organisms.add(organism);
+			}
+		}
+		return organisms;
+	}
 }

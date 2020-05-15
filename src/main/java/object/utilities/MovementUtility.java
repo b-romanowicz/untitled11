@@ -51,13 +51,14 @@ public class MovementUtility {
 	
 	public void moveFish(Fish fish) {
 		Position pos = fish.getPosition();
-		int x = randomCoordinate(fish, 'x');
-		int y = randomCoordinate(fish, 'y');
-		int z = randomCoordinate(fish, 'z');
-		if( x!=pos.getX() && y!=pos.getY() && z!=pos.getZ()) {
-			pos.setX(x);
-			pos.setY(y);
-			pos.setZ(z);
-		}
-	}
+		int x, y, z;
+		do { 
+			x = randomCoordinate(fish, 'x');
+			y = randomCoordinate(fish, 'y');
+			z = randomCoordinate(fish, 'z');
+		} while(x!=pos.getX() && y!=pos.getY() && z!=pos.getZ());
+		pos.setX(x);
+		pos.setY(y);
+		pos.setZ(z);
+	}	
 }

@@ -10,12 +10,10 @@ import main.java.object.Organism;
 public class Main  {
 	
 	private Aquarium aquarium;
-	private List<Organism> organisms;
 	private int maxIterNum;
 	
 	public Main(AquariumCreator aquariumCreator, int maxIterNum) {
 		aquarium = aquariumCreator.createAquarium();
-		organisms = new LinkedList<>();
 		this.maxIterNum = maxIterNum;
 	}
 	
@@ -24,8 +22,9 @@ public class Main  {
 		aquarium.getOrganismCreator().createOrganisms(fishNum, 0, 0, 0);
 		do {
 			System.out.println(maxIterNum - iters);
+			List<Organism> organisms = aquarium.getOrganisms();
 			for(Organism organism : organisms) { 
-				System.out.println(organism.getClass().getCanonicalName() + ": " + organism.getPosition().toString());
+				System.out.println(organism.getClass().getCanonicalName().toString() + ": " + organism.getPosition().toString());
 				organism.move();
 			}
 		} while(--iters>0);
