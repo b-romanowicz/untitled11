@@ -29,13 +29,13 @@ public class Prawn extends Organism {
     }
 
 
+    @Override
     public void move() {
 
     }
 
     public void eat() {
-=======
->>>>>>> branch 'master' of https://github.com/b-romanowicz/untitled11.git
+
 
     }
 
