@@ -1,6 +1,5 @@
 package main.java.sample;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import main.java.aquarium.Aquarium;
@@ -41,14 +40,16 @@ public class Main  {
 	}
 	
     public static void main(String[] args) {
-    	int length = checkInt(args[0]);
-    	int width = checkInt(args[1]);
-    	int height = checkInt(args[2]);
-    	int fishNumber = checkInt(args[3]);
-    	int maxIter = checkInt(args[4]);
-    	AquariumCreator aquariumCreator = new AquariumCreator(length, width, height);
-    	Main simulation = new Main(aquariumCreator, maxIter);
-        simulation.run(fishNumber);
-    	System.out.println("dziala");
+    	if(args.length >= 5) {
+	    	int length = checkInt(args[0]);
+	    	int width = checkInt(args[1]);
+	    	int height = checkInt(args[2]);
+	    	int fishNumber = checkInt(args[3]);
+	    	int maxIter = checkInt(args[4]);
+	    	AquariumCreator aquariumCreator = new AquariumCreator(length, width, height);
+	    	Main simulation = new Main(aquariumCreator, maxIter);
+	        simulation.run(fishNumber);
+	    	System.out.println("dziala");
+    	}
     }
 }
