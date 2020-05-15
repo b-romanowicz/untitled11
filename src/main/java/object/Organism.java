@@ -14,6 +14,11 @@ public abstract class Organism implements Object {
 		return position;
 	}
     
+    @Override
+    public void setPosition(Position position) {
+    	this.position = position;
+    }
+    
 	public int getAge() {
 		return age;
 	}

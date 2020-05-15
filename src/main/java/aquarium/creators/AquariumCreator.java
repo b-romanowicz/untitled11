@@ -1,6 +1,4 @@
-package aquarium.creators;
-
-
+package main.java.aquarium.creators;
 
 public class AquariumCreator {
 
@@ -14,9 +12,9 @@ public class AquariumCreator {
 		this.y = y;
 		this.z = z;
 	}
-	public src.main.java.aquarium.Aquarium createAquarium()
+	public main.java.aquarium.Aquarium createAquarium()
 	{
-		return new src.main.java.aquarium.Aquarium(x, y, z);
+		return new main.java.aquarium.Aquarium(x, y, z);
 	}
 }
 
