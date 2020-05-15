@@ -8,8 +8,8 @@ public abstract class Organism implements Object {
 	protected int speed;
     protected int age;
     protected int hunger;
-	
-	@Override
+    
+    @Override
 	public Position getPosition() {
 		return position;
 	}

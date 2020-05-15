@@ -6,7 +6,7 @@ public class Fish extends main.java.object.Organism {
 		private int temperature;
 		
 		public Fish() {
-    		
+    		super();
     	}
 		
 		public int getSpeed() {
