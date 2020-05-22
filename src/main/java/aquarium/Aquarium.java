@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import main.java.object.Organism;
 import main.java.object.creators.OrganismCreator;
 import main.java.object.utilities.MovementUtility;
+import main.java.objects.IObject;
+import main.java.objects.Organism;
 
 public class Aquarium {
 
@@ -16,7 +17,7 @@ public class Aquarium {
 	private OrganismCreator organismCreator;
 	private MovementUtility movementUtility;
 	
-	private List<Object> objects;
+	private List<IObject> objects;
 	
 	public Aquarium(int x, int y, int z) {
 		this.x = x;
@@ -47,7 +48,7 @@ public class Aquarium {
 		return movementUtility;
 	}
 
-	public boolean add(Object obj) {
+	public boolean add(IObject obj) {
 		if(obj != null && !objects.contains(obj)) {
 			objects.add(obj);
 			return true;
@@ -55,7 +56,7 @@ public class Aquarium {
 		return false;
 	}
 	
-	public boolean remove(Object obj) {
+	public boolean remove(IObject obj) {
 		if(obj != null && objects.contains(obj)) {
 			objects.remove(obj);
 			return true;

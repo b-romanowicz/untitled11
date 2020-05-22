@@ -2,9 +2,8 @@ package main.java.object.utilities;
 
 import java.util.Random;
 
-import main.java.object.Fish;
-import main.java.object.Position;
 import main.java.aquarium.Aquarium;
+import main.java.objects.Fish;
 
 public class MovementUtility {
 
@@ -23,25 +22,24 @@ public class MovementUtility {
 	}
 	
 	private int randomCoordinate(Fish fish, char c) {
-		Position pos = fish.getPosition();
 		int speed = fish.getSpeed();
 		int currentCoord = 0;
 		int allowedUpperCoord = 0;
 		int allowedLowerCoord = 0;
 		if(c == 'x') {
-			currentCoord = pos.getX();
+			currentCoord = fish.getX();
 			allowedUpperCoord = maxX - 1 - currentCoord;
-			allowedLowerCoord = pos.getX();
+			allowedLowerCoord = fish.getX();
 		}
 		if(c == 'y') {
-			currentCoord = pos.getY();
+			currentCoord = fish.getY();
 			allowedUpperCoord = maxY - 1 - currentCoord;
-			allowedLowerCoord = pos.getY();
+			allowedLowerCoord = fish.getY();
 		}
 		if(c == 'z') {
-			currentCoord = pos.getZ();
+			currentCoord = fish.getZ();
 			allowedUpperCoord = maxZ - 1 - currentCoord;
-			allowedLowerCoord = pos.getZ();
+			allowedLowerCoord = fish.getZ();
 		}
 		if(speed < allowedUpperCoord) allowedUpperCoord = speed;
 		if(speed < allowedLowerCoord) allowedLowerCoord = speed;
@@ -50,15 +48,14 @@ public class MovementUtility {
 	}
 	
 	public void moveFish(Fish fish) {
-		Position pos = fish.getPosition();
 		int x, y, z;
 		do { 
 			x = randomCoordinate(fish, 'x');
 			y = randomCoordinate(fish, 'y');
 			z = randomCoordinate(fish, 'z');
-		} while(x!=pos.getX() && y!=pos.getY() && z!=pos.getZ());
-		pos.setX(x);
-		pos.setY(y);
-		pos.setZ(z);
+		} while(x!=fish.getX() && y!=fish.getY() && z!=fish.getZ());
+		fish.setX(x);
+		fish.setY(y);
+		fish.setZ(z);
 	}	
 }

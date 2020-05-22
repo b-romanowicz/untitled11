@@ -3,11 +3,10 @@ package main.java.object.creators;
 import java.util.Random;
 
 import main.java.aquarium.Aquarium;
-import main.java.object.Fish;
-import main.java.object.Position;
-import main.java.object.Prawn;
-import main.java.object.RapaciousFish;
-import main.java.object.Snail;
+import main.java.objects.Fish;
+import main.java.objects.Prawn;
+import main.java.objects.RapaciousFish;
+import main.java.objects.Snail;
 
 public class OrganismCreator {
 	
@@ -21,9 +20,10 @@ public class OrganismCreator {
 
 	public Fish createFish(int x, int y, int z, int speed) {
 		Fish fish = new Fish(aquarium);
-		Position position = new Position(x, y, z);
 		aquarium.add(fish);
-		fish.setPosition(position);
+		fish.setX(x);
+		fish.setY(y);
+		fish.setZ(z);
 		fish.setSpeed(speed);
 		return fish;
 	}
