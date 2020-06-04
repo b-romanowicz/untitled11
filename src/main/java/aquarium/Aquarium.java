@@ -66,7 +66,7 @@ public class Aquarium {
 	
 	public List<Organism> getOrganisms() {
 		List<Organism> organisms = new ArrayList<>();
-		for(Object object : objects ) {
+		for(IObject object : objects ) {
 			if(object instanceof Organism) {
 				Organism organism = (Organism) object;
 				organisms.add(organism);
