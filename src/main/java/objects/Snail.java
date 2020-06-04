@@ -3,7 +3,7 @@ package main.java.objects;
 import main.java.aquarium.Aquarium;
 import main.java.objects.Organism;
 
-public abstract class Snail extends Organism {
+public class Snail extends Organism {
 
 	public Snail(Aquarium aquarium) {
 		super(aquarium);
@@ -14,6 +14,11 @@ public abstract class Snail extends Organism {
 		// TODO Auto-generated method stub
 
 
+	}
+
+	@Override
+	public void move() {
+		aquarium.getMovementUtility().moveSnail(this);
 	}
 
 }
