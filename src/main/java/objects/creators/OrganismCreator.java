@@ -1,9 +1,8 @@
-package main.java.object.creators;
+package main.java.objects.creators;
 
 import java.util.Random;
 
 import main.java.aquarium.Aquarium;
-import main.java.object.Position;
 import main.java.objects.Fish;
 import main.java.objects.Prawn;
 import main.java.objects.RapaciousFish;

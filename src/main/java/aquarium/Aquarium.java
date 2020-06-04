@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import main.java.object.creators.OrganismCreator;
-import main.java.object.utilities.MovementUtility;
 import main.java.objects.IObject;
 import main.java.objects.Organism;
+import main.java.objects.creators.OrganismCreator;
+import main.java.objects.utilities.MovementUtility;
 
 public class Aquarium {
 
