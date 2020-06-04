@@ -1,10 +1,10 @@
-package sample;
+package main.java.sample;
 
 import java.util.List;
 
 import main.java.aquarium.Aquarium;
 import main.java.aquarium.creators.AquariumCreator;
-import main.java.object.Organism;
+import main.java.objects.Organism;
 
 public class Main  {
 	
@@ -16,14 +16,13 @@ public class Main  {
 		this.maxIterNum = maxIterNum;
 	}
 
-	public void run(int fishNum) {
+	public void run(int fishNum, int snailNumber) {
 		int iters = maxIterNum;
-		aquarium.getOrganismCreator().createOrganisms(fishNum, 0, 0, 0);
+		aquarium.getOrganismCreator().createOrganisms(fishNum, 0, snailNumber, 0);
 		do {
 			System.out.println(maxIterNum - iters);
 			List<Organism> organisms = aquarium.getOrganisms();
 			for(Organism organism : organisms) { 
-				System.out.println(organism.getClass().getCanonicalName().toString() + ": " + organism.getPosition().toString());
 				organism.move();
 			}
 		} while(--iters>0);
@@ -45,11 +44,12 @@ public class Main  {
 	    	int width = checkInt(args[1]);
 	    	int height = checkInt(args[2]);
 	    	int fishNumber = checkInt(args[3]);
-	    	int maxIter = checkInt(args[4]);
+	    	int snailNumber = checkInt(args[4]);
+	    	int maxIter = checkInt(args[5]);
 	    	AquariumCreator aquariumCreator = new AquariumCreator(length, width, height);
 	    	Main simulation = new Main(aquariumCreator, maxIter);
-	        simulation.run(fishNumber);
-	    	System.out.println("dziala");
+	        simulation.run(fishNumber, snailNumber);
+	    	System.out.println("dziala. ");
     	}
     }
 }
