@@ -179,4 +179,25 @@ public class Aquarium {
 			food.spoil();
 		}
 	}
+
+	public boolean specimenDominates() {
+		int size = x*y*z/4;
+		if(fishNumber>size) {
+			System.out.println("Fish zdominowal akwarium");
+			return true;
+		}
+		if(rapaciousFishNumber>size) {
+			System.out.println("RapaciousFish zdominowal akwarium");
+			return true;
+		}
+		if(snailNumber>size) {
+			System.out.println("Snail zdominowal akwarium");
+			return true;
+		}
+		if(prawnNumber>size) {
+			System.out.println("Prawn zdominowal akwarium");
+			return true;
+		}
+		return false;
+	}
 }

@@ -17,27 +17,6 @@ public class Main  {
 		this.maxIterNum = maxIterNum;
 	}
 	
-	private boolean specimenDominates() {
-		int size = aquarium.getLength()*aquarium.getWidth()*aquarium.getHeight()/4;
-		if(aquarium.getFishNumber()>size) {
-			System.out.println("Fish zdominowal akwarium");
-			return true;
-		}
-		if(aquarium.getRapaciousFishNumber()>size) {
-			System.out.println("RapaciousFish zdominowal akwarium");
-			return true;
-		}
-		if(aquarium.getSnailNumber()>size) {
-			System.out.println("Snail zdominowal akwarium");
-			return true;
-		}
-		if(aquarium.getPrawnNumber()>size) {
-			System.out.println("Prawn zdominowal akwarium");
-			return true;
-			}
-		return false;
-	}
-	
 	public void run(int fishNum, int rapaciousFishNum, int snailNumber, int prawnNumber) {
 		int iters = maxIterNum;
 		aquarium.getOrganismCreator().createOrganisms(fishNum, rapaciousFishNum, snailNumber, prawnNumber);
@@ -60,7 +39,7 @@ public class Main  {
 					"" + aquarium.getSnailNumber(), "" + aquarium.getPrawnNumber(), 
 					"" + aquarium.getFodderNumber(), "" + aquarium.getAlgaNumber());
 			aquarium.getDataUtility().saveToCsv(strings);
-			if(specimenDominates()) break;
+			if(aquarium.specimenDominates()) break;
 		} while(--iters>0);
 	}
 	
