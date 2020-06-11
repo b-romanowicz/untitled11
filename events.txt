@@ -1,0 +1,173 @@
+Notatnik zdarzen:
+1:
+Akwarium obroslo glonem
+2:
+Snail zjadl Alga
+3:
+Do akwarium wrzucono Snail
+4:
+Akwarium obroslo glonem
+5:
+Dosypano karme
+6:
+7:
+8:
+Akwarium obroslo glonem
+9:
+Akwarium obroslo glonem
+10:
+Akwarium obroslo glonem
+11:
+Do akwarium wrzucono Snail
+12:
+Akwarium obroslo glonem
+13:
+14:
+15:
+Akwarium obroslo glonem
+16:
+Snail zjadl Alga
+Dosypano karme
+17:
+Snail zjadl Alga
+18:
+Akwarium obroslo glonem
+19:
+Prawn zjadl Alga
+20:
+RapaciousFish zjadl Fish
+21:
+Akwarium obroslo glonem
+22:
+23:
+RapaciousFish zjadl Prawn
+RapaciousFish zjadl Prawn
+Akwarium obroslo glonem
+24:
+Dosypano karme
+25:
+Snail zjadl Alga
+Akwarium obroslo glonem
+26:
+27:
+RapaciousFish zjadl Fodder
+28:
+Dosypano karme
+29:
+30:
+Dosypano karme
+31:
+32:
+Akwarium obroslo glonem
+33:
+Snail zjadl Alga
+Akwarium obroslo glonem
+34:
+35:
+RapaciousFish zjadl RapaciousFish
+36:
+Akwarium obroslo glonem
+37:
+38:
+Akwarium obroslo glonem
+39:
+40:
+41:
+Dosypano karme
+42:
+Akwarium obroslo glonem
+43:
+Snail zjadl Alga
+44:
+Dosypano karme
+45:
+46:
+47:
+Akwarium obroslo glonem
+48:
+Dosypano karme
+49:
+Akwarium obroslo glonem
+50:
+Fish zdechl z glodu
+Dosypano karme
+51:
+Akwarium obroslo glonem
+52:
+53:
+Akwarium obroslo glonem
+54:
+55:
+RapaciousFish zjadl Fodder
+Dosypano karme
+56:
+Akwarium obroslo glonem
+57:
+Dosypano karme
+58:
+59:
+60:
+61:
+Akwarium obroslo glonem
+62:
+63:
+Akwarium obroslo glonem
+64:
+65:
+RapaciousFish zdechl z glodu
+66:
+Akwarium obroslo glonem
+67:
+Dosypano karme
+68:
+Snail zjadl Alga
+Dosypano karme
+69:
+Akwarium obroslo glonem
+70:
+Snail zdechl z glodu
+71:
+Dosypano karme
+72:
+Akwarium obroslo glonem
+73:
+Dosypano karme
+74:
+75:
+76:
+77:
+Dosypano karme
+78:
+79:
+Dosypano karme
+80:
+Dosypano karme
+81:
+Snail zdechl z glodu
+82:
+83:
+84:
+Akwarium obroslo glonem
+85:
+86:
+Akwarium obroslo glonem
+87:
+88:
+89:
+Dosypano karme
+90:
+Snail zdechl z glodu
+91:
+92:
+93:
+94:
+95:
+96:
+Akwarium obroslo glonem
+97:
+Dosypano karme
+98:
+Dosypano karme
+99:
+100:
+Dosypano karme
