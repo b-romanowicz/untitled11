@@ -2,26 +2,38 @@ package main.java.objects;
 
 import main.java.aquarium.Aquarium;
 
+/**
+ * 
+ * @author jakkard
+ *
+ */
 public class RapaciousFish extends Fish{
-
+	
+	/**
+	 * Tworzy instancjê drapie¿nej ryby.
+	 * @param aquarium akwarium, w którym zostanie umieszczona drapie¿na ryba.
+	 */
 	public RapaciousFish(Aquarium aquarium) {
 		super(aquarium);
 	}
 	
-	@Override
-	public void eat(IObject object) {
-		if(object instanceof Food) super.eat(object);
-		if(object instanceof Organism) 
-			if(hunger<30) {	
-				Organism organism = (Organism) object;
-				hunger+=20;
-				if(hunger>100) hunger=100;
-				organism.die();
-				System.out.println(this.getClass().getSimpleName() + " zjadl " + organism.getClass().getSimpleName());
-				aquarium.getDataUtility().saveToTxt(this.getClass().getSimpleName() + " zjadl " + organism.getClass().getSimpleName());
-			}
+	/**
+     * Powoduje zabicie i zjedzenie organizmu podanego w parametrze prez drapie¿na rybê, co powoduje przywrócenie pewnej iloœci punktów zaspokojenia g³odu. 
+     * @param organism organizm do zjedzenia
+     */
+	public void eat(Organism organism) {
+		if(hunger<30) {	
+			hunger+=20;
+			if(hunger>100) hunger=100;
+			organism.die();
+			System.out.println(this.getClass().getSimpleName() + " zjadl " + organism.getClass().getSimpleName());
+			aquarium.getDataUtility().saveToTxt(this.getClass().getSimpleName() + " zjadl " + organism.getClass().getSimpleName());
 		}
+	}
 	
+	/**
+	 * Powoduje spadek iloœci zaspokojenia g³odu drapie¿nej ryby, ale w szybszym tempie ni¿ organizmowi (@see main.java.objects.Organism.#feelHunger()).
+	 */
 	@Override
 	public void feelHunger() {
 		hunger-=2;

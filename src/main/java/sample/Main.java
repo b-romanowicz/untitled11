@@ -7,16 +7,41 @@ import main.java.aquarium.Aquarium;
 import main.java.aquarium.creators.AquariumCreator;
 import main.java.objects.Organism;
 
+/**
+ * 
+ * @author jakkard
+ * @version 1.0
+ */
 public class Main  {
 	
+	/**
+	 * Akwarium
+	 */
 	private Aquarium aquarium;
+	
+	/**
+	 * Maksymalna liczba iteracji symulacji.
+	 */
 	private int maxIterNum;
 	
+	/**
+	 * Tworzy instancjê symulacji.
+	 * @param aquariumCreator kreator akwarium, w którym bêdzie odbywaæ siê symulacja.
+	 * @param maxIterNum maksymalna liczba iteracji symulacji.
+	 */
 	public Main(AquariumCreator aquariumCreator, int maxIterNum) {
 		aquarium = aquariumCreator.createAquarium();
 		this.maxIterNum = maxIterNum;
 	}
 	
+	/**
+	 * Uruchamia symulacjê z pocz¹tkowymi parametrami iloœci poszczególnych organizmów
+	 * trwaj¹c¹ a¿ do osi¹gniêcia maksymalnej liczby iteracji lub zdominowania akwarium przez jakiœ typ organizmów.
+	 * @param fishNum pocz¹tkowa iloœæ ryb (bez drapie¿nych ryb) w akwarium.
+	 * @param rapaciousFishNum pocz¹tkowa iloœæ drapie¿nych ryb w akwarium.
+	 * @param snailNumber pocz¹tkowa iloœæ œlimaków w akwarium.
+	 * @param prawnNumber pocz¹tkowa iloœæ krewetek w akwarium.
+	 */
 	public void run(int fishNum, int rapaciousFishNum, int snailNumber, int prawnNumber) {
 		int iters = maxIterNum;
 		aquarium.getOrganismCreator().createOrganisms(fishNum, rapaciousFishNum, snailNumber, prawnNumber);
@@ -43,6 +68,11 @@ public class Main  {
 		} while(--iters>0);
 	}
 	
+	/**
+	 * Sprawdza, czy podany string jest liczb¹ oraz czy mo¿e byæ rozmiarem akwarium. Jeœli nie zwraca domyœlny rozmiar.
+	 * @param arg string podany przy uruchamianiu programu.
+	 * @return rozmiar wymiaru.
+	 */
 	private static int checkDimension(String arg) {
 		try {
             int integer = Integer.parseInt(arg);
@@ -53,6 +83,12 @@ public class Main  {
 		}
 	}
 	
+	/**
+	 * Sprawdza, czy podany string jest liczb¹ oraz czy mo¿e byæ pocz¹tkow¹ iloœci¹ populacji pewnego typu organizmów. Jeœli nie zwraca domyœln¹ iloœæ.
+	 * @param arg string podany przy uruchamianiu programu.
+	 * @param size maksymalna liczba populacji ka¿dego typu organizmu.
+	 * @return iloœæ organizmów pojedyñczego typu.
+	 */
 	private static int checkPopulation(String arg, int size) {
 		try {
             int integer = Integer.parseInt(arg);
@@ -64,6 +100,11 @@ public class Main  {
 		}
 	}
 	
+	/**
+	 * Sprawdza, czy podany string jest liczb¹ oraz czy mo¿e byæ maksymaln¹ iloœci¹ iteracji. Jeœli nie zwraca domyœln¹ maksymaln¹ iloœæ iteracji.
+	 * @param arg string podany przy uruchamianu programu.
+	 * @return maksymalna iloœæ iteracji.
+	 */
 	private static int checkMaxIters(String arg) {
 		try {
             int integer = Integer.parseInt(arg);
@@ -74,6 +115,12 @@ public class Main  {
 		}
 	}
 	
+	/**
+	 * Uruchamia symulacjê z podanymi parametrami pocz¹tkowymi w kolejnoœci: d³ugoœæ_akwarium szerokoœæ akwarium wysokoœæ_akwarium
+	 * iloœæ_ryb iloœæ_drapie¿nych_ryb iloœæ_œlimaków iloœæ_krewetek maksymalna_liczba_iteracji. Jeœli brak jest argumentów lub jakieœ argumenty
+	 * nie mog¹ byæ parametrami ustawia domyœlne wartoœci.
+	 * @param args argumenty podane przy uruchamianiu programu.
+	 */
     public static void main(String[] args) {
     	int length;
     	if(args.length<1) length = 5;

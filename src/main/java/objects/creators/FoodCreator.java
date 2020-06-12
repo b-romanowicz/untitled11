@@ -6,18 +6,43 @@ import main.java.aquarium.Aquarium;
 import main.java.objects.Alga;
 import main.java.objects.Fodder;
 
+/**
+ * 
+ * @author jakkard
+ *
+ */
 public class FoodCreator {
 	
+	/**
+	 * Obiekt klasy random, generator pseudolosowoœci.
+	 */
 	private Random random;
+	
+	/**
+	 * Akwarium, do którego po¿ywienie bêdzie tworzyæ kreator.
+	 */
 	private Aquarium aquarium;
+	
+	/**
+	 * Iloœæ punktów zaspokojenia g³odu jak¹ bêdzie posiadaæ pokarm stworzony przez ten kreator.
+	 */
 	private final int satisfaction;
 	
+	/**
+	 * Tworzy instancjê klasy kreatora pokarmu.
+	 * @param aquarium akwarium, w którym kreator bêdzie tworzy³ pokarm.
+	 * @param satisfaction sta³a dla wszystich pokarmów tworzonych przez kreator iloœæ zaspokajanych punktów g³odu.
+	 */
 	public FoodCreator(Aquarium aquarium, int satisfaction) {
 		random = new Random();
 		this.aquarium = aquarium;
 		this.satisfaction = satisfaction;
 	}
-
+	
+	/**
+	 * Tworzy dan¹ iloœæ karmy i umieszcza j¹ na losowych pozycjach w przestrzeni akwarium, jeœli nie ma tam ju¿ innego po¿ywienia.
+	 * @param amount iloœæ tworzonych obiektów karmy.
+	 */
 	public void createFodder(int amount) {
 		for(int i = 0; i<amount; i++) {
 			int x = random.nextInt(aquarium.getLength());
@@ -30,6 +55,10 @@ public class FoodCreator {
 		}
 	}
 	
+	/**
+	 * Tworzy dan¹ iloœæ glonów i umieszcza je na losowych pozycjach na œcianach lub pod³o¿u akwarium, jeœli nie znajduje siê tam ju¿ inny pokarm.
+	 * @param amount Iloœæ tworzonych obiektów glonów.
+	 */
 	public void createAlga(int amount) {
 		for(int i = 0; i<amount; i++) {
 			int x, y, z;

@@ -9,8 +9,18 @@ import main.java.objects.Prawn;
 import main.java.objects.RapaciousFish;
 import main.java.objects.Snail;
 
+/**
+ * 
+ * @author jakkard
+ *
+ */
 public class InteractionUtility {
 	
+	/**
+	 * Sprawdzaja jakie interakcje mog¹ zajœæ miêdzy obiektami i odpowiednio je wywo³uje.
+	 * @param obj1 jeden obiekt, który wchodzi w interakcje.
+	 * @param obj2 drugi obiekt, który wchodzi w interakcje.
+	 */
 	public static void interact(IObject obj1, IObject obj2) {
 		if(obj1 instanceof Prawn && obj2 instanceof Prawn) {
 			Prawn prawn1 = (Prawn) obj1;

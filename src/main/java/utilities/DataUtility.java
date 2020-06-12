@@ -6,13 +6,32 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 
+ * @author jakkard
+ *
+ */
 public class DataUtility {
     
+	/**
+	 * Plik, który przechowuje dane zapisane w formacie csv.
+	 */
 	private File dataCsv;
+	
+	/**
+	 * Plik, który przechowuje dane zapisane w formacie tekstowym.
+	 */
 	private File eventsTxt;
 	
+	/**
+	 * Tworzy instancje klasy narzêdzi danych.
+	 */
 	public DataUtility() {}
 	
+	/**
+	 * Usuwa zawartoœæ pliku.
+	 * @param file plik do usuniêcia zawartoœci.
+	 */
 	private void clean(File file) {
 		FileWriter fileWriter;
 		try {
@@ -25,6 +44,11 @@ public class DataUtility {
 		}
 	}
 	
+	/**
+	 * Tworzy parê plików s³u¿¹cych do zapisu danych.
+	 * @param csvName nazwa pliku csv z rozszerzeniem .csv
+	 * @param txtName nazwa pliku tekstowego z rozszerzeniem .txt
+	 */
 	public void createFiles(String csvName, String txtName){
 		dataCsv = new File(csvName);
 		eventsTxt = new File(txtName);
@@ -46,7 +70,12 @@ public class DataUtility {
 		}
 		makeTitles();
 	}
-
+	
+	/**
+	 * Pozwalaja zapisaæ tablicê stringów do pliku csv. Wszystkie te stringi znajd¹ siê w jednym wierszu, oddzielone przecinkami.
+	 * @param strings tablica stringów.
+	 * @return true jeœli powiód³ siê zapis, tzn. nie wyrzucono wyj¹tku, false jeœli przechwycono wyj¹tek.
+	 */
 	public boolean saveToCsv(List<String> strings) {
 		FileWriter csvWriter;
 		try {
@@ -66,7 +95,12 @@ public class DataUtility {
 			return false;
 		}
 	}
-
+	
+	/**
+	 * Pozwala zapisaæ string do pliku tekstowego, w postaci jednego wiersza.
+	 * @param string string do umieszczenia w pliku
+	 * @return True jeœli powiod³o, tzn. nie wyrzucono wyj¹tku, false jeœli przechwycono wyj¹tek.
+	 */
 	public boolean saveToTxt(String string) {
 		FileWriter txtWriter;
 		try {
@@ -82,6 +116,9 @@ public class DataUtility {
 		}
 	}
 	
+	/**
+	 * Pozwala odpowiednio zatytu³owaæ (napisaæ na pierwszym wierszu) oba pliki: csv oraz tekstowy.
+	 */
 	private void makeTitles() {
 		List<String> strings = Arrays.asList("i", "Fish", "RapaciousFish", "Snail", "Prawn", "Fodder", "Alga");
 		this.saveToCsv(strings);
