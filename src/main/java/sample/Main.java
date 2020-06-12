@@ -49,17 +49,12 @@ public class Main  {
 			aquarium.getDataUtility().saveToTxt(maxIterNum-iters+1 + ":");
 			System.out.println(maxIterNum - iters + 1);
 			List<Organism> organisms = aquarium.getOrganisms();
-			System.out.println("Ryby: " + aquarium.getFishNumber() + " Drapiezne: " + aquarium.getRapaciousFishNumber() + " Slimaki: " + aquarium.getSnailNumber() + " Krewetki: " + aquarium.getPrawnNumber());
-			System.out.println("Karma: " + aquarium.getFodderNumber() + " Glony: " + aquarium.getAlgaNumber());
 			for(Organism organism : organisms) { 
-				//System.out.println(organism.getClass().getSimpleName() + ": x: " + organism.getX() + " y: " + organism.getY() + " z: " + organism.getZ());
 				organism.move();
 				organism.feelHunger();
 			}
 			aquarium.spoilFood();
 			aquarium.getEventUtility().randomEvent();
-			//if(aquarium.getFishNumber() + aquarium.getRapaciousFishNumber() + aquarium.getPrawnNumber() + aquarium.getSnailNumber() 
-				//> aquarium.getLength() + aquarium.getWidth() + aquarium.getHeight()) break;
 			List<String> strings = Arrays.asList("" + (maxIterNum-iters+1), "" + aquarium.getFishNumber(), "" + aquarium.getRapaciousFishNumber(), 
 					"" + aquarium.getSnailNumber(), "" + aquarium.getPrawnNumber(), 
 					"" + aquarium.getFodderNumber(), "" + aquarium.getAlgaNumber());
@@ -150,5 +145,6 @@ public class Main  {
 	    AquariumCreator aquariumCreator = new AquariumCreator(length, width, height);
 	    Main simulation = new Main(aquariumCreator, maxIters);
 	    simulation.run(fishNumber, rapaciousFishNumber, snailNumber, prawnNumber);
+	    System.out.println("Pomyslnie zakonczono symulacje");
     }
 }

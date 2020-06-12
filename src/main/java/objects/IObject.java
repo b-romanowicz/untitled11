@@ -3,7 +3,7 @@ package main.java.objects;
 /**
  * Interfejs obiektu w akwarium.
  * @author jakkard
- * @version
+ * @version 1.0
  */
 public interface IObject {
     

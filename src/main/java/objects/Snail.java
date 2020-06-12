@@ -4,11 +4,11 @@ import main.java.aquarium.Aquarium;
 import main.java.objects.Organism;
 
 /**
- * Obiekt œlimaka, który porusza siê po œcianach akwarium. Nastêpuje to po wylosowaniu dwóch wspó³rzêdnych z zakresu <-speed, speed>, a trzecia pozostaje
+ * Obiekt œlimaka, który porusza siê po œcianach akwarium. Nastêpuje to po wylosowaniu dwóch wspó³rzêdnych z zakresu -speed, speed, a trzecia pozostaje
  * brzegowa. Organizm ten ¿ywi siê glonem. Mo¿e rozmno¿yæ siê z innym œlimakiem lub rozmno¿yæ siê samodzielnie, jeœli posiada odpowiedni
  * poziom zaspokojenia g³odu. Jeœli poziom g³odu spadnie do 0 œlimak umiera.
  * @author jakkard
- * @version
+ * @version 1.0
  */
 public class Snail extends Organism {
 	
@@ -26,7 +26,6 @@ public class Snail extends Organism {
 	public void reproduceItself() {
 		aquarium.getOrganismCreator().createSnail(x, y, z, speed);
 		hunger-=50;
-		System.out.println(this.getClass().getSimpleName() + " sam sie rozmnozyl");
 		aquarium.getDataUtility().saveToTxt(this.getClass().getSimpleName() + " sam sie rozmnozyl");
 	}
 	
@@ -56,7 +55,6 @@ public class Snail extends Organism {
 		int organismHunger=organism.getHunger()-50;
 		organism.setHunger(organismHunger);
     	aquarium.getOrganismCreator().createSnail(x, y, z, speed);
-    	System.out.println(this.getClass().getSimpleName() + " rozmnozyl sie");
 		aquarium.getDataUtility().saveToTxt(this.getClass().getSimpleName() + " rozmnozyl sie");
     	return true;
     }

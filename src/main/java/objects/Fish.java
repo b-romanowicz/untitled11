@@ -5,7 +5,7 @@ import java.util.Random;
 import main.java.aquarium.Aquarium;
 
 /**
- * Obiekt ryby, który porusza siê po akwarium na losow¹ pozycjê o ka¿d¹ wspó³rzêdn¹ z zakresu <-speed, speed>. Organizm ten ¿ywi siê karm¹. 
+ * Obiekt ryby, który porusza siê po akwarium na losow¹ pozycjê o ka¿d¹ wspó³rzêdn¹ z zakresu -speed, speed. Organizm ten ¿ywi siê karm¹. 
  * Ryba mo¿e równie¿ rozmno¿yæ siê z inn¹ ryb¹. ¯ycie obiektu determinuje poziom zaspokojenia g³odu, który pozwala na rozmna¿anie lub jeœli spadnie
  * do 0 powoduje œmieræ ryby.
  * @author jakkard
@@ -48,7 +48,6 @@ public class Fish extends main.java.objects.Organism {
 		organism.setHunger(organismHunger);
 		if(this instanceof RapaciousFish && fish instanceof RapaciousFish) {
 			aquarium.getOrganismCreator().createRapaciousFish(x, y, z, speed);
-			System.out.println("RapaciousFish sie rozmnozyly");
 			aquarium.getDataUtility().saveToTxt("RapaciousFish rozmnozyly sie");
 			return true;
 		}
@@ -58,19 +57,17 @@ public class Fish extends main.java.objects.Organism {
 			int r = random.nextInt(2);
 			if(r==0) {
 				aquarium.getOrganismCreator().createFish(x, y, z, speed);
-				System.out.println("RapaciousFish i Fish rozmnozyly sie na Fish");
 				aquarium.getDataUtility().saveToTxt("RapaciousFish i Fish rozmnozyly sie na Fish");
 				return true;
 			}
 			else if(r==1) {
 				aquarium.getOrganismCreator().createRapaciousFish(x, y, z, speed);
-				System.out.println("RapaciousFish i Fish sie rozmnozyly na RapaciousFish");
 				aquarium.getDataUtility().saveToTxt("RapaciousFish i Fish rozmnozyly sie na RapaciousFish");
 				return true;
 			}
 		}
 		aquarium.getOrganismCreator().createFish(x, y, z, speed);
-		System.out.println("Fish sie rozmnozyly");
+		aquarium.getDataUtility().saveToTxt("Fish rozmnozyly sie");
 		return true;
 		}
 	}

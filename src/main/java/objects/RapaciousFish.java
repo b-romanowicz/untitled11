@@ -27,7 +27,6 @@ public class RapaciousFish extends Fish{
 			hunger+=20;
 			if(hunger>100) hunger=100;
 			organism.die();
-			System.out.println(this.getClass().getSimpleName() + " zjadl " + organism.getClass().getSimpleName());
 			aquarium.getDataUtility().saveToTxt(this.getClass().getSimpleName() + " zjadl " + organism.getClass().getSimpleName());
 		}
 	}
@@ -40,7 +39,6 @@ public class RapaciousFish extends Fish{
 		hunger-=2;
 		if(hunger<=0) {
 			this.die();
-			System.out.println(this.getClass().getSimpleName() + " zdechl z glodu");
 			aquarium.getDataUtility().saveToTxt(this.getClass().getSimpleName() + " zdechl z glodu");
 		}
 	}

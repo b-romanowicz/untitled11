@@ -130,7 +130,6 @@ public abstract class Organism implements IObject {
     	hunger--;
     	if(hunger<=0) {
     		this.die(); 
-    		System.out.println(this.getClass().getSimpleName() + " zdechl z glodu"); 
     		aquarium.getDataUtility().saveToTxt(this.getClass().getSimpleName() + " zdechl z glodu");
     	}
     }
@@ -149,7 +148,6 @@ public abstract class Organism implements IObject {
     public void eat(Food food) {
 		food.feed(this);
 		aquarium.getDataUtility().saveToTxt(this.getClass().getSimpleName() + " zjadl " + food.getClass().getSimpleName());
-		System.out.println(this.getClass().getSimpleName() + " zjadl " + food.getClass().getSimpleName());
 		}        
     
     /**
