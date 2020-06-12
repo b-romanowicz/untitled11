@@ -43,11 +43,11 @@ public class Main  {
 	 * @param prawnNumber pocz¹tkowa iloœæ krewetek w akwarium.
 	 */
 	public void run(int fishNum, int rapaciousFishNum, int snailNumber, int prawnNumber) {
+		System.out.println("Rozpoczeto symulacje");
 		int iters = maxIterNum;
 		aquarium.getOrganismCreator().createOrganisms(fishNum, rapaciousFishNum, snailNumber, prawnNumber);
 		do {
 			aquarium.getDataUtility().saveToTxt(maxIterNum-iters+1 + ":");
-			System.out.println(maxIterNum - iters + 1);
 			List<Organism> organisms = aquarium.getOrganisms();
 			for(Organism organism : organisms) { 
 				organism.move();
