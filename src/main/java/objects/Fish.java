@@ -5,7 +5,7 @@ import java.util.Random;
 import main.java.aquarium.Aquarium;
 
 /**
- * Obiekt ryby, który porusza siê po akwarium na losow¹ pozycjê o ka¿d¹ wspó³rzêdn¹ z zakresu <-speed, speed>. Organizm te ¿ywi siê karm¹. 
+ * Obiekt ryby, który porusza siê po akwarium na losow¹ pozycjê o ka¿d¹ wspó³rzêdn¹ z zakresu <-speed, speed>. Organizm ten ¿ywi siê karm¹. 
  * Ryba mo¿e równie¿ rozmno¿yæ siê z inn¹ ryb¹. ¯ycie obiektu determinuje poziom zaspokojenia g³odu, który pozwala na rozmna¿anie lub jeœli spadnie
  * do 0 powoduje œmieræ ryby.
  * @author jakkard
@@ -58,7 +58,7 @@ public class Fish extends main.java.objects.Organism {
 			int r = random.nextInt(2);
 			if(r==0) {
 				aquarium.getOrganismCreator().createFish(x, y, z, speed);
-				System.out.println("RapaciousFish i Fish sie rozmnozyly na Fish");
+				System.out.println("RapaciousFish i Fish rozmnozyly sie na Fish");
 				aquarium.getDataUtility().saveToTxt("RapaciousFish i Fish rozmnozyly sie na Fish");
 				return true;
 			}

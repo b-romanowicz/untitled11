@@ -10,9 +10,9 @@ import main.java.objects.RapaciousFish;
 import main.java.objects.Snail;
 
 /**
- * 
+ * Statyczna klasa determinuj¹ca zachowanie obiektów w czasie interakcji z innymi obiektami.
  * @author jakkard
- *
+ * @version
  */
 public class InteractionUtility {
 	

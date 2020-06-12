@@ -4,9 +4,11 @@ import main.java.aquarium.Aquarium;
 import main.java.objects.Organism;
 
 /**
- * 
+ * Obiekt krewetki, który porusza siê po pod³o¿u akwarium. Nastêpuje to po wylosowaniu dwóch wspó³rzêdnych x i y z zakresu <-speed, speed>.
+ * Z pozostaje zawsze 0. ¯ycie organizmu determinuje poziom zaspokojenia g³odu, który pozwala na rozmna¿anie siê z inn¹ krewetk¹.
+ * Jeœli natomiast spadnie do 0 organizm umiera.
  * @author jakkard
- * @version
+ * @version 1.0
  */
 public class Prawn extends Organism {
 	

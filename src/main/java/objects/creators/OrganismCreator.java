@@ -9,9 +9,9 @@ import main.java.objects.RapaciousFish;
 import main.java.objects.Snail;
 
 /**
- * 
+ * Obiekt s³u¿¹cy do tworzenia organizmów oraz umieszczenia ich w akwarium. Umo¿liwia równie¿ stworzenie organizmów o parametrach losowych.
  * @author jakkard
- *
+ * @version 1.0
  */
 public class OrganismCreator {
 	

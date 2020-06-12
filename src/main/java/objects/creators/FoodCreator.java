@@ -7,9 +7,9 @@ import main.java.objects.Alga;
 import main.java.objects.Fodder;
 
 /**
- * 
+ * Obiekt s³u¿¹cy do tworzenia pokarmu w akwarium, który umieszcza na losowych pozycjach, jeœli nie ma tam ju¿ innego pokarmu. 
  * @author jakkard
- *
+ * @version 1.0
  */
 public class FoodCreator {
 	

@@ -4,9 +4,11 @@ import main.java.aquarium.Aquarium;
 import main.java.objects.Organism;
 
 /**
- * 
+ * Obiekt œlimaka, który porusza siê po œcianach akwarium. Nastêpuje to po wylosowaniu dwóch wspó³rzêdnych z zakresu <-speed, speed>, a trzecia pozostaje
+ * brzegowa. Organizm ten ¿ywi siê glonem. Mo¿e rozmno¿yæ siê z innym œlimakiem lub rozmno¿yæ siê samodzielnie, jeœli posiada odpowiedni
+ * poziom zaspokojenia g³odu. Jeœli poziom g³odu spadnie do 0 œlimak umiera.
  * @author jakkard
- *
+ * @version
  */
 public class Snail extends Organism {
 	

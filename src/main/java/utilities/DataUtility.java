@@ -7,9 +7,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 
+ * Obiekt zarz¹dza zapisem danych z akwarium do dwóch plików: csv i tekstowego.
  * @author jakkard
- *
+ * @version
  */
 public class DataUtility {
     

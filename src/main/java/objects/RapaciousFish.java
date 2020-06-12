@@ -3,9 +3,10 @@ package main.java.objects;
 import main.java.aquarium.Aquarium;
 
 /**
- * 
+ * Obiekt drapie¿nej ryby dziedziczy po klasie rodzica - ryby. Ró¿ni siê tym, ¿e poziom zaspokojenia g³odu spada szybciej ni¿ u normalnych
+ * organizmów. Mo¿e zjadaæ równie¿ inne organizmy.
  * @author jakkard
- *
+ * @version 1.0
  */
 public class RapaciousFish extends Fish{
 	

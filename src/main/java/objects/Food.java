@@ -3,7 +3,8 @@ package main.java.objects;
 import main.java.aquarium.Aquarium;
 
 /**
- * Abstrakcyjna klasa pokarmu. Implementuje funkcjonalnoœæ wspóln¹ dla wszystkich pokarmów. Jest to nakarmienie jakiegoœ obiektu oraz psucie siê.
+ * Abstrakcyjna klasa pokarmu. Implementuje funkcjonalnoœæ wspóln¹ dla wszystkich pokarmów. 
+ * Jest to nakarmienie jakiegoœ obiektu oraz psucie siê.
  * @author jakkard
  * @version 1.0
  */

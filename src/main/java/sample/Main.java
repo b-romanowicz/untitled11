@@ -8,14 +8,14 @@ import main.java.aquarium.creators.AquariumCreator;
 import main.java.objects.Organism;
 
 /**
- * 
+ * Klasa odpowiedzialna za symulacjê.
  * @author jakkard
  * @version 1.0
  */
 public class Main  {
 	
 	/**
-	 * Akwarium
+	 * Akwarium, w w który odbywaæ siê bêdzie symulacja.
 	 */
 	private Aquarium aquarium;
 	
